@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:linear-gradient(rgb(241, 239, 239),rgb(179, 175, 175));
+    padding: 20px;
+
+}
+
+
+.container{
+    width: 350px;
+    height: 120px;
+    background-color: #888888c2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    border-radius: 5px;
+
+}
+
+.myh1 h1{
+    color: #fefefe;
+     text-align: center;
+     padding-left: 10px;
+    
+}
+
+.form-container {
+    margin: 10px;
+    width: 100%;
+}
+.form-container input {
+    width: 70%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    
+
+
+}
+.form-container input:focus {
+    outline: none;
+}
+.addbtn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(33, 100%, 68%);
+    font-weight: bold;
+  
+}
+.addbtn:hover {
+    cursor: pointer;
+}
+
+
+.table-container{
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color:  #0a0a0a50;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    overflow-x: auto;
+  
+}
+
+.table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 100%;
+    
+ 
+    
+  
+}
+.table th, td {
+    border: 1px solid white;
+    padding: 10px;
+}
+.table th{
+    font-size: 24px;
+}
+.table td {
+    font-size: 18px;
+}
+
+.editbtn{
+    margin-left: 40px;
+    padding: 5px 10px;
+    background-color: #170cb3d2;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: bold;
+
+    
+}
+.deletebtn{
+    margin-left: 40px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #bb0707d2;
+    border: none;
+    color: #fff;
+    border-radius: 3px;    
+    font-weight: bold;
+
+} 
+
+
+
+/*popup*/
+
+.popup-overlay{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height : 100%;
+    display: flex;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.445);
+
+}
+.popupcontent {
+    background-color: #3c08b4d8;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.close:hover ,.close:focus {
+    color: #000;
+    cursor: pointer;
+}
+.myh2{
+    text-align: center;
+}
+.updatebtn{
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(37, 228, 253);
+    font-weight: bold;
+}
+.popupinput{
+    margin: 10px;
+    width: 70%;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+
+}
+.popupinput:focus {
+    outline: none;
+}
+
+
+@media screen and (max-width : 930px){
+    .outer-container{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+
+
+    }
+    .container {
+        margin-left: 0px;
+        width: 250px;
+    }
+    .myh1 h1 {
+        font-size: 25px;
+    }
+    .table-container {
+        width: 400px;
+        margin-top: 20px;
+       
+
+    }
+    .table th{
+        font-size: 20px;
+    }
+    
+    .editbtn,.deletebtn {
+        margin: 10px;
+    }
+    .buttons {
+        text-align: center;
+    }
+    .popupcontent {
+       
+        width: 80%;
+        max-width: 500px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .close {
+        position: absolute;
+        right: 5px;
+        top: 3px;
+    }
+    
+    .myh2{
+        
+        font-size: 18px;
+    }
+    .updatebtn{
+       
+        font-size: 14px;
+    }
+    .popupinput{
+        width: 70%;
+        padding: 6px;
+    }
+  
+}
+
+@media screen and (max-width : 450px){
+    .table-container {
+        width: 310px;
+        margin-top: 20px;
+       
+
+    }
+    .table th, td {
+        padding: 5px;
+    }
+    .table th{
+        font-size: 15px;
+    }
+    .table td{
+     font-size: 15px;
+    }
+    .buttons {
+        text-align: center;
+    }
+    
+    .popupcontent {
+       
+        width: 80%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .close {
+        position: absolute;
+        right: 5px;
+        top: 3px;
+    }
+    
+    .myh2{
+        
+        font-size: 18px;
+    }
+    .updatebtn{
+       
+        font-size: 12px;
+    }
+    .popupinput{
+        width: 80%;
+    }
+  
+    
+}
